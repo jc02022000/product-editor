@@ -50,42 +50,42 @@
                 >
                   <button
                     class="flex items-center h-10 w-full border-black border rounded-lg m-2 grid hover:cursor-pointer hover:bg-cyan-100 hover:border-cyan-200 bg-slate-100 border-slate-100"
-                    :class="active === 'superAdmin' ? 'bg-cyan-300' : ''"
+                    :class="active === 'superAdmin' ? 'bg-cyan-200' : ''"
                     @click="active = 'superAdmin'"
                   >
                     Super Admin
                   </button>
                   <button
                     class="flex items-center h-10 w-full border-black border rounded-lg m-2 grid hover:cursor-pointer hover:bg-cyan-100 hover:border-cyan-200 bg-slate-100 border-slate-100"
-                    :class="active === 'HR' ? 'bg-cyan-300' : ''"
+                    :class="active === 'HR' ? 'bg-cyan-200' : ''"
                     @click="active = 'HR'"
                   >
                     Human Resource
                   </button>
                   <button
                     class="flex items-center h-10 w-full border-black border rounded-lg m-2 grid hover:cursor-pointer hover:bg-cyan-100 hover:border-cyan-200 bg-slate-100 border-slate-100"
-                    :class="active === 'content' ? 'bg-cyan-300' : ''"
+                    :class="active === 'content' ? 'bg-cyan-200' : ''"
                     @click="active = 'content'"
                   >
                     Content Admin
                   </button>
                   <button
                     class="flex items-center h-10 w-full border-black border rounded-lg m-2 grid hover:cursor-pointer hover:bg-cyan-100 hover:border-cyan-200 bg-slate-100 border-slate-100"
-                    :class="active === 'academic' ? 'bg-cyan-300' : ''"
+                    :class="active === 'academic' ? 'bg-cyan-200' : ''"
                     @click="active = 'academic'"
                   >
                     Academic
                   </button>
                   <button
                     class="flex items-center h-10 w-full border-black border rounded-lg m-2 grid hover:cursor-pointer hover:bg-cyan-100 hover:border-cyan-200 bg-slate-100 border-slate-100"
-                    :class="active === 'educ' ? 'bg-cyan-300' : ''"
+                    :class="active === 'educ' ? 'bg-cyan-200' : ''"
                     @click="active = 'educ'"
                   >
                     Education
                   </button>
                   <button
                     class="flex items-center h-10 w-full border-black border rounded-lg m-2 grid hover:cursor-pointer hover:bg-cyan-100 hover:border-cyan-200 bg-slate-100 border-slate-100"
-                    :class="active === 'english' ? 'bg-cyan-300' : ''"
+                    :class="active === 'english' ? 'bg-cyan-200' : ''"
                     @click="active = 'english'"
                   >
                     English
