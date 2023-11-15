@@ -5,7 +5,7 @@
       <img src="@/assets/img/IMG_6010.jpeg" class="h-12 w-12 rounded-full bg-contain mr-1 mt-5" />
       <div class="mb-4">
         <h3 class="mb-0 mt-6 text-[#242c41] text-sm">Jecelito V. Batac</h3>
-        <p class="mt-0 text-xs text-slate-400">Administrator</p>
+        <p class="mt-0 text-xs text-slate-500">Administrator</p>
       </div>
     </div>
   </div>

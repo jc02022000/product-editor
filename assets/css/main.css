@@ -16,16 +16,16 @@ img {
 }
 
 .gradientButton {
-  background: rgb(133, 64, 166);
+  background: rgb(114, 19, 161);
   background: linear-gradient(
     90deg,
-    rgba(133, 64, 166, 1) 20%,
-    rgba(159, 133, 198, 1) 50%,
-    rgba(133, 64, 166, 1) 80%
+    rgba(114, 19, 161, 1) 12%,
+    rgba(102, 64, 166, 1) 50%,
+    rgba(114, 19, 161, 1) 88%
   );
 }
 
-#skip a{
+#skip a {
   position: absolute;
   left: -1000px;
   top: auto;
@@ -34,13 +34,13 @@ img {
   overflow: hidden;
 }
 
-#skip a:focus{
+#skip a:focus {
   position: static;
-  height: auto!important;
-  width: auto!important;
+  height: auto !important;
+  width: auto !important;
 }
 
-#signUpSkip a{
+#signUpSkip a {
   position: absolute;
   left: -1000px;
   top: auto;
@@ -49,10 +49,8 @@ img {
   overflow: hidden;
 }
 
-#signUpSkip a:focus{
+#signUpSkip a:focus {
   position: static;
-  height: auto!important;
-  width: auto!important;
+  height: auto !important;
+  width: auto !important;
 }
-
-

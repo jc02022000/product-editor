@@ -19,7 +19,7 @@
           </p>
         </div>
       </div>
-      <div class="text-[#c8c8c8] flex mt-4 ml-7 items-center">
+      <div class="text-gray-300 flex mt-4 ml-7 items-center">
         <NavigationItem
           itemLabel="Books"
           itemIcon="book"
@@ -33,7 +33,7 @@
           @click="changeRoute('userTypes')"
         />
       </div>
-      <div class="absolute right-5 text-[#c8c8c8] mt-5">
+      <div class="absolute right-5 text-white mt-5">
         <button
           class="bg-transparent border-[1px] rounded-full p-2 pr-4 pl-4 text-sm"
           @click="logout"

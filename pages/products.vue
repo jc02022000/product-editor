@@ -53,14 +53,14 @@
                   <button @click="open('view')">
                     <font-awesome-icon
                       icon="pen-to-square"
-                      class="p-1 text-[#1DCADA]"
+                      class="p-1 text-[#0053B7]"
                     />
                     <span class="sr-only">Edit</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
-                      class="p-1 text-[#FF3131]"
+                      class="p-1 text-red-800"
                     />
                     <span class="sr-only">Delete</span>
                   </button>
@@ -88,14 +88,14 @@
                   <button @click="open('view')">
                     <font-awesome-icon
                       icon="pen-to-square"
-                      class="p-1 text-[#1DCADA]"
+                      class="p-1 text-[#0053B7]"
                     />
                     <span class="sr-only">Edit</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
-                      class="p-1 text-[#FF3131]"
+                      class="p-1 text-red-800"
                     />
                     <span class="sr-only">Delete</span>
                   </button>
@@ -122,14 +122,14 @@
                   <button @click="open('view')">
                     <font-awesome-icon
                       icon="pen-to-square"
-                      class="p-1 text-[#1DCADA]"
+                      class="p-1 text-[#0053B7]"
                     />
                     <span class="sr-only">Edit</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
-                      class="p-1 text-[#FF3131]"
+                      class="p-1 text-red-800"
                     />
                     <span class="sr-only">Delete</span>
                   </button>
@@ -217,7 +217,7 @@
                 <div class="p-6">
                   <div>
                     <div class="mb-6">
-                      <p class="text-xs m-0 text-slate-500">
+                      <p class="text-xs m-0 text-[#101827]">
                         Internation Standard Book Number (ISBN)
                       </p>
                       <input
@@ -227,7 +227,7 @@
                       />
                     </div>
                     <div class="mb-6">
-                      <p class="text-xs m-0 text-slate-500">Name of Book</p>
+                      <p class="text-xs m-0 text-[#101827]">Name of Book</p>
                       <input
                         type="text"
                         class="border-b-[0.8px] border-b-slate-400 w-full mt-1"
@@ -235,7 +235,7 @@
                       />
                     </div>
                     <div>
-                      <p class="text-xs m-0 text-slate-500">Description</p>
+                      <p class="text-xs m-0 text-[#101827]">Description</p>
                       <textarea
                         class="max-h-[100px] border-t-[1px] border-[1px] p-2 overflow-scroll rounded-lg w-full"
                       ></textarea>
@@ -243,7 +243,7 @@
                   </div>
                   <div class="mt-5">
                     <fieldset>
-                      <legend class="text-xs text-slate-500">
+                      <legend class="text-xs text-[#101827]">
                         List of User Types:
                       </legend>
                       <div
@@ -308,7 +308,7 @@
                   </button>
                   <button
                     type="button"
-                    class="h-[40px] w-[120px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    class="h-[40px] w-[120px] text-white bg-[#1C4E9A] hover:bg-[#0053B7] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                     @click="open('alert')"
                   >
                     Add Book
@@ -402,7 +402,7 @@
                 <div class="p-6">
                   <div>
                     <div class="mb-6">
-                      <label for="isbnbrave" class="text-xs m-0 text-slate-500">
+                      <label for="isbnbrave" class="text-xs m-0 text-[#101827]">
                         Internation Standard Book Number (ISBN)
                       </label>
                       <input
@@ -413,7 +413,7 @@
                       />
                     </div>
                     <div class="mb-6">
-                      <label for="nameBrave" class="text-xs m-0 text-slate-500"
+                      <label for="nameBrave" class="text-xs m-0 text-[#101827]"
                         >Name of Book</label
                       >
                       <input
@@ -424,7 +424,7 @@
                       />
                     </div>
                     <div>
-                      <p class="text-xs m-0 text-slate-500">Description</p>
+                      <p class="text-xs m-0 text-[#101827]">Description</p>
                       <textarea
                         class="max-h-[80px]border-t-[1px] border-[1px] p-2 overflow-scroll rounded-lg w-full"
                       >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </textarea
@@ -433,7 +433,7 @@
                   </div>
                   <div>
                     <fieldset>
-                      <legend class="text-xs m-0 text-slate-500">
+                      <legend class="text-xs m-0 text-[#101827]">
                         List of User Types:
                       </legend>
                       <div
@@ -490,7 +490,7 @@
                   </button>
                   <button
                     type="button"
-                    class="float-right right-0 h-[40px] w-[100px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    class="float-right right-0 h-[40px] w-[100px] text-white bg-[#1C4E9A] hover:bg-[#0053B7] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                     @click="open('alert')"
                   >
                     Save
@@ -548,21 +548,21 @@
                   />
                 </svg>
                 <h3
-                  class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400"
+                  class="mb-5 text-lg font-normal text-gray-200"
                 >
                   Are you sure you want to {{ action }} this book?
                 </h3>
                 <button
                   data-modal-hide="popup-modal"
                   type="button"
-                  class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                  class="text-white bg-red-800 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
                 >
                   Yes, I'm sure
                 </button>
                 <button
                   data-modal-hide="popup-modal"
                   type="button"
-                  class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                  class="text-gray-500 text-white bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
                   @click="closeModal('alert')"
                 >
                   No, cancel

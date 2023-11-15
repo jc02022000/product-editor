@@ -8,7 +8,7 @@
         <input id="search" type="text" :placeholder="activeRoute === 'products' ? 'Search a book...' : 'Search a user type...'" class="mt-5 w-2/5 border-[1px] rounded-r-lg bg-white border-l-0" />
         <!-- <label for="search">Search A Book</label> -->
       </div>
-      <button class="h-8 text-white bg-[#0095ff] rounded-md text-xs p-2 hover:bg-[#0296ffd9]" @click="$emit('clickButton')">Add New {{ activeRoute === "products" ? "Book" : "User Type" }}</button>
+      <button class="h-8 text-[#1D1C1C] bg-[#28C840] rounded-md text-xs p-2 hover:bg-[]" @click="$emit('clickButton')">Add New {{ activeRoute === "products" ? "Book" : "User Type" }}</button>
     
     </div>
   </div>

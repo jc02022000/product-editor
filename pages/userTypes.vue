@@ -42,14 +42,14 @@
                   <button @click="open('edit')">
                     <font-awesome-icon
                       icon="pen-to-square"
-                      class="p-1 text-[#1DCADA]"
+                      class="p-1 text-[#0053B7]"
                     />
                     <span class="sr-only">Edit</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
-                      class="p-1 text-[#FF3131]"
+                      class="p-1 text-red-800"
                     />
                     <span class="sr-only">Delete</span>
                   </button>
@@ -73,14 +73,14 @@
                   <button @click="open('edit')">
                     <font-awesome-icon
                       icon="pen-to-square"
-                      class="p-1 text-[#1DCADA]"
+                      class="p-1 text-[#0053B7]"
                     />
                     <span class="sr-only">Edit</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
-                      class="p-1 text-[#FF3131]"
+                      class="p-1 text-red-800"
                     />
                     <span class="sr-only">Delete</span>
                   </button>
@@ -103,14 +103,14 @@
                   <button @click="open('edit')">
                     <font-awesome-icon
                       icon="pen-to-square"
-                      class="p-1 text-[#1DCADA]"
+                      class="p-1 text-[#0053B7]"
                     />
                     <span class="sr-only">Edit</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
-                      class="p-1 text-[#FF3131]"
+                      class="p-1 text-red-800"
                     />
                     <span class="sr-only">Delete</span>
                   </button>
@@ -132,14 +132,14 @@
                   <button @click="open('edit')">
                     <font-awesome-icon
                       icon="pen-to-square"
-                      class="p-1 text-[#1DCADA]"
+                      class="p-1 text-[#0053B7]"
                     />
                     <span class="sr-only">Edit</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
-                      class="p-1 text-[#FF3131]"
+                      class="p-1 text-red-800"
                     />
                     <span class="sr-only">Delete</span>
                   </button>
@@ -161,14 +161,14 @@
                   <button @click="open('edit')">
                     <font-awesome-icon
                       icon="pen-to-square"
-                      class="p-1 text-[#1DCADA]"
+                      class="p-1 text-[#0053B7]"
                     />
                     <span class="sr-only">Edit</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
-                      class="p-1 text-[#FF3131]"
+                      class="p-1 text-red-800"
                     />
                     <span class="sr-only">Delete</span>
                   </button>
@@ -190,14 +190,14 @@
                   <button @click="open('edit')">
                     <font-awesome-icon
                       icon="pen-to-square"
-                      class="p-1 text-[#1DCADA]"
+                      class="p-1 text-[#0053B7]"
                     />
                     <span class="sr-only">Edit</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
-                      class="p-1 text-[#FF3131]"
+                      class="p-1 text-red-800"
                     />
                     <span class="sr-only">Delete</span>
                   </button>
@@ -254,7 +254,7 @@
                 <div class="p-6">
                   <div v-if="activeTab === 'content'">
                     <div class="mb-6">
-                      <label for="user" class="text-xs m-0 text-slate-500"
+                      <label for="user" class="text-xs m-0 text-[#101827]"
                         >User</label
                       >
                       <input
@@ -266,7 +266,7 @@
                     </div>
                     <div>
                       <fieldset>
-                        <legend class="text-xs m-0 text-slate-500">
+                        <legend class="text-xs m-0 text-[#101827]">
                           Choose Access Rights
                         </legend>
                         <div
@@ -314,7 +314,7 @@
                   </button>
                   <button
                     type="button"
-                    class="h-[40px] w-[140px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    class="h-[40px] w-[140px] text-white bg-[#1C4E9A] hover:bg-[#0053B7] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                     @click="open('alert')"
                   >
                     Save User Type
@@ -367,7 +367,7 @@
                 <div class="p-6">
                   <div>
                     <div class="mb-6">
-                      <label for="superAdmin" class="text-xs m-0 text-slate-500"
+                      <label for="superAdmin" class="text-xs m-0 text-[#101827]"
                         >User</label
                       >
                       <input
@@ -379,7 +379,7 @@
                     </div>
                     <div>
                       <fieldset>
-                        <legend class="text-xs m-0 text-slate-500">
+                        <legend class="text-xs m-0 text-[#101827]">
                           Choose Access Rights
                         </legend>
                         <div
@@ -443,7 +443,7 @@
                   </button>
                   <button
                     type="button"
-                    class="h-[40px] w-[100px] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    class="h-[40px] w-[100px] text-white bg-[#1C4E9A] hover:bg-[#0053B7] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                     @click="open('alert')"
                   >
                     Save
@@ -502,21 +502,21 @@
                   />
                 </svg>
                 <h3
-                  class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400"
+                  class="mb-5 text-lg font-normal text-gray-200"
                 >
                   Are you sure you want to {{ action }} this user type?
                 </h3>
                 <button
                   data-modal-hide="popup-modal"
                   type="button"
-                  class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                  class="text-white bg-red-800 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
                 >
                   Yes, I'm sure
                 </button>
                 <button
                   data-modal-hide="popup-modal"
                   type="button"
-                  class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                  class="text-gray-500 text-white bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
                   @click="closeModal('alert')"
                 >
                   No, cancel
@@ -552,11 +552,13 @@ export default defineComponent({
     open(modal) {
       if (modal === "add") {
         this.action = "add";
+        this.title = "User Types - Add New User Type"
         this.add = true;
       } else if (modal === "alert") {
         this.alert = true;
       } else {
         this.action = "edit";
+        this.title = "User Types - Edit Super Admin"
         this.edit = true;
       }
       this.backdrop = true;
@@ -575,6 +577,7 @@ export default defineComponent({
         this.backdrop = false;
       }
       this.action = "delete";
+      this.title = "User Types"
     },
   },
 });

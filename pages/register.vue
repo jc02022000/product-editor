@@ -1,19 +1,19 @@
 <template>
+  <Head><Title>Product Editor Register an Account</Title></Head>
 
-<Head><Title>Register A New Account</Title></Head>
+  <div class="flex justify-center bg-cyan-900 text-white" id="skip">
+    <a href="#signUp" class="underline border-0">Sign Up as a new user</a>
+  </div>
+  <div class="flex justify-center bg-cyan-900 text-white" id="skip">
+    <a href="/" class="underline border-0">Login as a user</a>
+  </div>
   <div class="grid grid-cols-9 h-[100vh]">
     <div class="w-full bg-white z-0 col-span-4">
-      <div id="signUpSkip">
-        <a href="#signUp">Sign Up as a new user</a>
-      </div>
-      <div id="skip">
-        <a href="/">Login as a user</a>
-      </div>
       <div class="flex text-black m-3 mb-0">
         <Logo />
       </div>
-      <div class="h-[90%] flex items-center justify-center">
-        <div class="w-[70%]">
+      <div class="h-[88%] flex items-center justify-center">
+        <div class="w-[80%]">
           <div class="w-full">
             <p
               class="text-[45px] font-bold text-slate-600"
@@ -22,26 +22,63 @@
             >
               Create a New Account
             </p>
+            <div class="grid grid-cols-2 gap-2">
+              <IconTextField
+                id="first"
+                label="First Name"
+                fieldIcon="user"
+                fieldPlaceholder="First Name"
+                fieldType="text"
+                :required="true"
+              />
+              <IconTextField
+                id="middle"
+                label="Middle Name"
+                fieldIcon="user"
+                fieldPlaceholder="Middle Name"
+                fieldType="text"
+              />
+              <IconTextField
+                id="last"
+                label="Last Name"
+                fieldIcon="user"
+                fieldPlaceholder="Last Name"
+                fieldType="text"
+                :required="true"
+              />
+              <IconTextField
+                id="username"
+                label="Username"
+                fieldIcon="user"
+                fieldPlaceholder="Username"
+                fieldType="text"
+                :required="true"
+              />
+            </div>
             <IconTextField
-              fieldIcon="user"
-              fieldPlaceholder="Username"
-              fieldType="text"
-            />
+                id="email"
+                label="Email"
+                :required="true"
+                fieldIcon="envelope"
+                fieldPlaceholder="Email"
+                fieldType="text"
+              />
+              <IconTextField
+                id="password"
+                label="Password"
+                :required="true"
+                fieldIcon="unlock"
+                fieldPlaceholder="Password"
+                fieldType="password"
+              />
             <IconTextField
-              fieldIcon="envelope"
-              fieldPlaceholder="Email"
-              fieldType="text"
-            />
-            <IconTextField
-              fieldIcon="unlock"
-              fieldPlaceholder="Password"
-              fieldType="password"
-            />
-            <IconTextField
-              fieldIcon="unlock-keyhole"
-              fieldPlaceholder="Confirm Password"
-              fieldType="password"
-            />
+                id="confirm"
+                label="Confirm Password"
+                :required="true"
+                fieldIcon="unlock-keyhole"
+                fieldPlaceholder="Confirm Password"
+                fieldType="password"
+              />
             <div class="ml-2 mt-5">
               <fieldset>
                 <legend>Choose an Account type:</legend>
@@ -110,21 +147,23 @@
       <!-- <div
         class="h-full absolute bg-black rounded-r-lg opacity-30 z-10"
       ></div> -->
-        <div class="flex justify-center items-center h-full w-full">
-          <div class="text-white z-20 w-full">
-            <h1 class="text-center text-[70px] font-bold">Welcome Back!</h1>
-            <p class="text-center">Enter your credentials and continue your journey with us!</p>
-            <div class="flex justify-center">
-              <button
-                class="w-[150px] text-sm rounded-full bg-white text-black p-2 font-bold mt-16"
-                @click="login"
-                id="signIn"
-              >
-                Sign In
-              </button>
-            </div>
+      <div class="flex justify-center items-center h-full w-full">
+        <div class="text-white z-20 w-full">
+          <h1 class="text-center text-[70px] font-bold">Welcome Back!</h1>
+          <p class="text-center">
+            Enter your credentials and continue your journey with us!
+          </p>
+          <div class="flex justify-center">
+            <button
+              class="w-[150px] text-sm rounded-full bg-white text-black p-2 font-bold mt-16"
+              @click="login"
+              id="signIn"
+            >
+              Sign In
+            </button>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </template>

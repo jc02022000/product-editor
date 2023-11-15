@@ -2,6 +2,12 @@
   <Head>
     <Title>Product Access Editor Login</Title>
   </Head>
+  <div class="flex justify-center bg-cyan-900 text-white" id="skip">
+    <a href="#signIn" class="underline border-0">Login as a user</a>
+  </div>
+  <div class="flex justify-center bg-cyan-900 text-white" id="skip">
+    <a href="/register" class="underline border-0">Sign Up as a new user</a>
+  </div>
   <div class="grid grid-cols-9 h-[100vh]">
     <div
       class="h-auto w-full bg-[url('@/assets/img/bg1.jpg')] bg-cover bg-right-top rounded-r-lg z-10 col-span-5"
@@ -11,12 +17,6 @@
       ></div>
       <div class="w-full h-full z-20">
         <div class="flex text-white m-3">
-          <div id="skip">
-            <a href="#signIn">Login as a user</a>
-          </div>
-          <div id="signUpSkip">
-            <a href="/register">Sign Up as a new user</a>
-          </div>
           <Logo />
         </div>
         <div class="flex justify-center items-center">
@@ -56,18 +56,24 @@
           Sign In
         </p>
         <IconTextField
+          id="email"
+          label="Username or Email"
           fieldIcon="user"
           fieldPlaceholder="Username or Email"
           fieldType="text"
+          :required="true"
         />
         <IconTextField
+          id="password"
+          label="Password"
           fieldIcon="lock"
           fieldPlaceholder="Password"
           fieldType="password"
+          :required="true"
         />
         <div class="ml-2 mt-2">
           <div class="mr-2">
-            <a href="#" class="text-sm underline text-cyan-500"
+            <a href="#" class="text-sm underline text-[#250FFF]"
               >Forgot Password?</a
             >
           </div>
