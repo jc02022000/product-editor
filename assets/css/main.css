@@ -1,0 +1,58 @@
+body {
+  background-color: #edeef0;
+  /* background-color: rgb(255, 255, 255); */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.logoShadow {
+  box-shadow: 0px 15px 48px -8px rgba(0, 0, 0, 1);
+}
+
+img {
+  padding: 5px;
+}
+
+.gradientButton {
+  background: rgb(133, 64, 166);
+  background: linear-gradient(
+    90deg,
+    rgba(133, 64, 166, 1) 20%,
+    rgba(159, 133, 198, 1) 50%,
+    rgba(133, 64, 166, 1) 80%
+  );
+}
+
+#skip a{
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+#skip a:focus{
+  position: static;
+  height: auto!important;
+  width: auto!important;
+}
+
+#signUpSkip a{
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+#signUpSkip a:focus{
+  position: static;
+  height: auto!important;
+  width: auto!important;
+}
+
+
