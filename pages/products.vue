@@ -598,11 +598,13 @@ export default defineComponent({
     },
     open(modal) {
       if (modal === "add") {
+        this.title="Books - Add New Book"
         this.action = "add";
         this.add = true;
       } else if (modal === "alert") {
         this.alert = true;
       } else {
+        this.title="Books - Edit Brave New World"
         this.action = "edit";
         this.view = true;
       }
@@ -622,6 +624,7 @@ export default defineComponent({
         this.backdrop = false;
       }
       this.action="delete";
+      this.title="Books";
     },
     editContents(source) {
       if (source === "cancel") {
