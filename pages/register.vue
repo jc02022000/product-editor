@@ -12,8 +12,8 @@
       <div class="flex text-black m-3 mb-0">
         <Logo />
       </div>
-      <div class="h-[80%] flex items-center justify-center">
-        <div class="w-[50%]">
+      <div class="h-[90%] flex items-center justify-center">
+        <div class="w-[70%]">
           <div class="w-full">
             <p
               class="text-[45px] font-bold text-slate-600"
