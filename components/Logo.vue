@@ -1,5 +1,5 @@
 <template>
-  <div tabindex="-1" class="flex">
+  <div tabindex="-1" class="flex z-20">
     <img
       src="https://seeklogo.com/images/U/university-of-cambridge-logo-E6ED593FBF-seeklogo.com.png"
       class="h-[37px] w-[35px]"
