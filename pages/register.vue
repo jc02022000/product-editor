@@ -1,9 +1,9 @@
 <template>
   <div class="float-left h-full absolute w-3/6 bg-white z-0">
-    <div id="skip">
+    <div id="signUpSkip">
       <a href="#signUp">Sign Up as a new user</a>
     </div>
-    <div id="signInSkip">
+    <div id="skip">
       <a href="/">Login as a user</a>
     </div>
     <div class="flex text-black m-3 mb-0">

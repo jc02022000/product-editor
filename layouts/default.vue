@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="sticky top-0">
+    <nav class="sticky top-0 z-10">
       <NavigationBar />
     </nav>
     <main>
