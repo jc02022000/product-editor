@@ -61,7 +61,7 @@
                       icon="trash-can"
                       class="p-1 text-red-800"
                     />
-                    <span class="sr-only">Brave New World Book Edit</span>
+                    <span class="sr-only">Brave New World Book Delete</span>
                   </button>
                 </td>
               </tr>
