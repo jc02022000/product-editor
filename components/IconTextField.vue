@@ -3,7 +3,8 @@
     <label :for="id" class="text-xs ml-2">{{ label }}</label>
     <div class="flex">
       <div
-        class="border-[1px] rounded-l-full bg-white border-r-0 h-12 flex items-center p-1"
+        class="border-[1px] rounded-l-full bg-white border-r-0 h-12 flex items-center p-1 "
+        :class="error ? 'border-red-600': ''"
       >
         <font-awesome-icon :icon="fieldIcon" class="p-1 text-[#475569]" />
       </div>
@@ -12,6 +13,9 @@
         :type="fieldType"
         :placeholder="fieldPlaceholder"
         :required="required"
+        :value="modelValue"
+        :class="error ? 'border-red-600': ''"
+        @input="$emit('update:modelValue', $event.target.value)"
         class="w-full border-[1px] rounded-r-full bg-white border-l-0 text-[#475569]"
       />
     </div>
@@ -23,8 +27,10 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
     data(){
-        return{}
+        return{
+        }
     },
+    emits: ["update:modelValue"],
     props:{
         fieldIcon:{
             type: String
@@ -43,6 +49,12 @@ export default defineComponent({
         },
         label:{
           type: String
+        },
+        modelValue:{
+          type: String
+        },
+        error:{
+          type: Boolean
         }
     }
 })

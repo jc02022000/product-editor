@@ -216,7 +216,7 @@
             :class="add ? '' : 'hidden'"
           >
             <div
-              class="relative w-full max-w-2xl max-h-full bg-white rounded-lg text-black"
+              class="relative w-full max-w-2xl bg-white rounded-lg text-black"
             >
               <div class="relative rounded-lg shadow">
                 <div>

@@ -21,14 +21,10 @@
         </div>
         <div class="flex justify-center items-center">
           <div class="text-white z-20 mt-[20%]">
-            <h1
-              class="text-center text-[70px] font-bold"
-              tabindex="0"
-              id="signUp"
-            >
+            <h1 class="text-center text-[70px] font-bold" id="signUp">
               New Here?
             </h1>
-            <p class="text-center" tabindex="0">
+            <p class="text-center">
               Sign Up and Discover a great amount of new opportunities!
             </p>
             <div class="flex justify-center">
@@ -55,6 +51,22 @@
         >
           Sign In
         </p>
+        <div
+          class="border-red-600 border-[0.5px] rounded-lg flex justify-center p-2 bg-red-200"
+          v-if="this.v$.$error"
+          id="error"
+          tabindex="0"
+        >
+          <ol class="list-disc text-sm">
+            <li v-if="emailRequired">
+              Email is Required. Field cannot be empty
+            </li>
+            <li v-if="passwordRequired">
+              Password is Required. Field cannot be empty
+            </li>
+            <li v-if="notMatch">Password or Email is Incorrect.</li>
+          </ol>
+        </div>
         <IconTextField
           id="email"
           label="Username or Email"
@@ -62,6 +74,8 @@
           fieldPlaceholder="Username or Email"
           fieldType="text"
           :required="true"
+          v-model="email"
+          :error="emailRequired"
         />
         <IconTextField
           id="password"
@@ -70,6 +84,8 @@
           fieldPlaceholder="Password"
           fieldType="password"
           :required="true"
+          v-model="password"
+          :error="passwordRequired || notMatch"
         />
         <div class="ml-2 mt-2">
           <div class="mr-2">
@@ -81,7 +97,7 @@
         <div class="flex justify-center w-full">
           <button
             class="w-full h-12 text-base rounded-full gradientButton text-white p-2 font-bold mt-16"
-            @click="login"
+            @click.prevent="login(event)"
           >
             Sign In
           </button>
@@ -93,10 +109,20 @@
 
 <script>
 import { defineComponent } from "vue";
+import useValidate from "@vuelidate/core";
+import { required, email, sameAs, minLength } from "@vuelidate/validators";
 
 export default defineComponent({
   data() {
-    return {};
+    return {
+      email: "",
+      password: "",
+      v$: useValidate(),
+      emailRequired: false,
+      passwordRequired: false,
+      notMatch: false,
+      error: false,
+    };
   },
   props: {
     admin: {
@@ -107,9 +133,37 @@ export default defineComponent({
     register() {
       navigateTo("/register");
     },
-    login() {
-      navigateTo("/products");
+    async login(event) {
+      // navigateTo("/products");
+
+      await this.v$.$validate();
+      if (this.v$.$error) {
+        this.v$.$errors.forEach((item) => {
+          if (item.$property === "email" && item.$validator === "required") {
+            this.emailRequired = true;
+          } else if (item.$property === "password" && item.$validator === "required") {
+            this.passwordRequired = true;
+          } else if (item.$validator === "sameAs") {
+            this.notMatch = true;
+          } 
+          document.getElementById("error").focus();
+        });
+      } else {
+        navigateTo('/products')
+      }
+
+      console.log(this.v$.$errors);
     },
+  },
+  validations() {
+    return {
+      email: { required, email },
+      password: {
+        required,
+        minLength: minLength(6),
+        sameAs: sameAs("password123"),
+      },
+    };
   },
 });
 </script>
