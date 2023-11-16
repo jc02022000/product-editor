@@ -51,22 +51,22 @@
         >
           Sign In
         </p>
-        <div
-          class="border-red-600 border-[0.5px] rounded-lg flex justify-center p-2 bg-red-200"
-          v-if="this.v$.$error"
-          id="error"
+        <fieldset id="error"
           tabindex="0"
-        >
+          class="border-red-600 border-[0.5px] rounded-lg flex justify-center p-5 bg-red-200"
+          v-if="this.v$.$error">
+          <legend class="font-bold text-red-900">Errors have Occured</legend>
+       
           <ol class="list-disc text-sm">
             <li v-if="emailRequired">
-              Email is Required. Field cannot be empty
+              Email is Required. Field cannot be empty.
             </li>
             <li v-if="passwordRequired">
-              Password is Required. Field cannot be empty
+              Password is Required. Field cannot be empty.
             </li>
             <li v-if="notMatch">Password or Email is Incorrect.</li>
           </ol>
-        </div>
+      </fieldset>
         <IconTextField
           id="email"
           label="Username or Email"
