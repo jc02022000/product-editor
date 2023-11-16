@@ -18,7 +18,7 @@
                     type="checkbox"
                     id="all"
                     class="mr-2"
-                    value="Select All Books"
+                    aria-label="Select All Books"
                   />
                 </td>
                 <th scope="col" class="px-6 py-3">ISBN</th>
@@ -34,13 +34,12 @@
             <tbody>
               <tr class="border-b">
                 <td class="px-2 py-2">
-                  <input type="checkbox" id="brace" />
+                  <input type="checkbox" aria-label="Brave New World"/>
                 </td>
                 <td scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
                   978-1-4028-9462-6
                 </td>
-                <td class="px-6 py-4">
-                  <label for="brave">Brave New World</label>
+                <td class="px-6 py-4">Brave New World
                 </td>
                 <td class="px-6 py-4">
                   <ol>
@@ -55,26 +54,24 @@
                       icon="pen-to-square"
                       class="p-1 text-[#0053B7]"
                     />
-                    <span class="sr-only">Edit</span>
+                    <span class="sr-only">Edit Brave New World Book</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
                       class="p-1 text-red-800"
                     />
-                    <span class="sr-only">Delete</span>
+                    <span class="sr-only">Delete Brave New World Book</span>
                   </button>
                 </td>
               </tr>
               <tr class="border-b">
-                <td class="px-2 py-2"><input type="checkbox" id="math" /></td>
-                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                <td class="px-2 py-2"><input type="checkbox" id="math" aria-label="Abstract Algebra and Famous Impossibilities"/></td>
+                <td scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
                   134-1-6765-1235-6
-                </th>
+                </td>
                 <td class="px-6 py-4">
-                  <label for="math"
-                    >Abstract Algebra and Famous Impossibilities</label
-                  >
+                  Abstract Algebra and Famous Impossibilities
                 </td>
                 <td class="px-6 py-4">
                   <ol>
@@ -90,26 +87,25 @@
                       icon="pen-to-square"
                       class="p-1 text-[#0053B7]"
                     />
-                    <span class="sr-only">Edit</span>
+                    <span class="sr-only">Edit Abstract Algebra and Famous Impossibilities Book</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
                       class="p-1 text-red-800"
                     />
-                    <span class="sr-only">Delete</span>
+                    <span class="sr-only">Delete Abstract Algebra and Famous Impossibilities Book</span>
                   </button>
                 </td>
               </tr>
               <tr>
-                <td class="px-2 py-2"><input type="checkbox" id="horse" /></td>
-                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                <td class="px-2 py-2"><input type="checkbox" id="horse" aria-label="H.O.R.S.E.: A Game of Basketball and Imagination"/></td>
+                <td scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
                   122-1-4056-1463-6
-                </th>
+                </td>
                 <td class="px-6 py-4">
-                  <label for="horse"
-                    >H.O.R.S.E.: A Game of Basketball and Imagination</label
-                  >
+                  H.O.R.S.E.: A Game of Basketball and Imagination
+                  
                 </td>
                 <td class="px-6 py-4">
                   <ol>
@@ -124,14 +120,14 @@
                       icon="pen-to-square"
                       class="p-1 text-[#0053B7]"
                     />
-                    <span class="sr-only">Edit</span>
+                    <span class="sr-only">Edit H.O.R.S.E.: A Game of Basketball and Imagination Book</span>
                   </button>
                   <button @click="open('alert')">
                     <font-awesome-icon
                       icon="trash-can"
                       class="p-1 text-red-800"
                     />
-                    <span class="sr-only">Delete</span>
+                    <span class="sr-only">Delete H.O.R.S.E.: A Game of Basketball and Imagination Book</span>
                   </button>
                 </td>
               </tr>
