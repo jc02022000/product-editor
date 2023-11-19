@@ -433,28 +433,6 @@
             class="relative w-full max-w-lg max-h-full rounded-lg text-black"
           >
             <div class="relative rounded-lg shadow  bg-[#323e53]">
-              <button
-                type="button"
-                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                @click="closeModal('alert')"
-              >
-                <svg
-                  class="w-3 h-3"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 14 14"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                  />
-                </svg>
-                <span class="sr-only">Close modal</span>
-              </button>
               <div class="p-6 text-center">
                 <svg
                   class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200"
@@ -471,9 +449,12 @@
                     d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                   />
                 </svg>
-                <h3 class="mb-5 text-lg font-normal text-gray-200" tabindex="0" id="confirm">
+                <div id="confirm" tabindex="0">
+                  <p class="mb-5 text-lg font-normal text-gray-200"  >
                   Are you sure you want to {{ action }} this book?
-                </h3>
+                </p>
+                </div>
+               
                 <button
                   data-modal-hide="popup-modal"
                   type="button"
@@ -596,8 +577,8 @@ export default defineComponent({
         this.add = true;
       } else if (modal === "alert") {
         this.alert = true;
+        document.getElementById("confirm").focus()
         this.index = index;
-        document.getElementById('confirm').focus()
       } else if (modal === "view") {
         this.title = "Books - " + this.books[index].title;
         this.action = "edit";
@@ -635,6 +616,7 @@ export default defineComponent({
         this.isbn = "";
         this.bookTitle = "";
         this.description = "";
+        this.users=[];
         this.isbnRequired = false;
         this.titleRequired = false;
         this.lengthError = false;
