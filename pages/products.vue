@@ -128,7 +128,7 @@
                   </div>
                 </div>
                 <!-- Modal body-->
-                <div class="p-6 max-h-[600px] overflow-scroll">
+                <div class="p-6 max-h-[400px] overflow-scroll">
                   <fieldset
                     id="error"
                     :tabindex="this.alert ? -1 : 0"
@@ -300,7 +300,7 @@
                   </div>
                 </div>
                 <!-- Modal body-->
-                <div class="p-6">
+                <div class="p-6 max-h-[400px] overflow-scroll">
                   <fieldset
                     id="errorEdit"
                     :tabindex="this.alert ? -1 : 0"
@@ -432,7 +432,7 @@
           <div
             class="relative w-full max-w-lg max-h-full bg-white rounded-lg text-black"
           >
-            <div class="relative rounded-lg shadow bg-white dark:bg-gray-700">
+            <div class="relative rounded-lg shadow bg-white dark:bg-gray-700 bg-[#323e53]">
               <button
                 type="button"
                 class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
