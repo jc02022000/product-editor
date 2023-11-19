@@ -3,8 +3,8 @@
     <Head>
       <Title>{{ title }}</Title>
     </Head>
-    <NuxtLayout>
-      <SectionTool @clickButton="open('add')" />
+    <NuxtLayout :open="this.add || this.edit || this.alert">
+      <SectionTool @clickButton="open('add')" :open="this.add || this.edit || this.alert"/>
       <div class="w-[95%] mt-8 ml-9">
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table class="w-full text-sm text-left bg-white">
@@ -13,23 +13,23 @@
             </caption>
             <thead class="text-xs t uppercase bg-gray-50 border-b">
               <tr>
-                <th scope="col" class="px-2 py-1 font-medium whitespace-nowrap">
-                  <input type="checkbox" />
-                </th>
+                <td scope="col" class="px-2 py-1 font-medium whitespace-nowrap">
+                  <input type="checkbox" aria-label="Select All Books" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0"/>
+                </td>
                 <th scope="col" class="px-6 py-3">User</th>
                 <th scope="col" class="px-6 py-3">
                   <div class="flex items-center">Access</div>
                 </th>
-                <th scope="col" class="px-6 py-3"></th>
+                <th scope="col" class="px-6 py-3 text-end">Action</th>
               </tr>
             </thead>
             <tbody>
               <tr class="border-b">
                 <td class="px-2 py-2">
-                  <input type="checkbox" id="SA" />
+                  <input type="checkbox" id="SA" aria-label="Super Admin" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0"/>
                 </td>
                 <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                  <label for="SA">Super Admin</label>
+                  Super Admin
                 </th>
                 <td class="px-6 py-4">
                   <ol>
@@ -39,28 +39,28 @@
                   </ol>
                 </td>
                 <td class="px-6 py-4 text-right">
-                  <button @click="open('edit')">
+                  <button @click="open('edit')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="pen-to-square"
                       class="p-1 text-[#0053B7]"
                     />
-                    <span class="sr-only">Edit</span>
+                    <span class="sr-only">Super Admin Edit</span>
                   </button>
-                  <button @click="open('alert')">
+                  <button @click="open('alert')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="trash-can"
                       class="p-1 text-red-800"
                     />
-                    <span class="sr-only">Delete</span>
+                    <span class="sr-only">Super Admin Delete</span>
                   </button>
                 </td>
               </tr>
               <tr class="border-b">
                 <td class="px-2 py-2">
-                  <input type="checkbox" id="CA" />
+                  <input type="checkbox" id="CA" aria-label="Content Admin" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0"/>
                 </td>
                 <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                  <label for="CA">Content Admin</label>
+                  Content Admin
                 </th>
                 <td class="px-6 py-4">
                   <ol>
@@ -70,28 +70,27 @@
                   </ol>
                 </td>
                 <td class="px-6 py-4 text-right">
-                  <button @click="open('edit')">
+                  <button @click="open('edit')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="pen-to-square"
                       class="p-1 text-[#0053B7]"
                     />
-                    <span class="sr-only">Edit</span>
+                    <span class="sr-only">Content Admin Edit</span>
                   </button>
-                  <button @click="open('alert')">
+                  <button @click="open('alert')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="trash-can"
                       class="p-1 text-red-800"
                     />
-                    <span class="sr-only">Delete</span>
+                    <span class="sr-only">Content Admin Delete</span>
                   </button>
                 </td>
               </tr>
               <tr class="border-b">
                 <td class="px-2 py-2">
-                  <input type="checkbox" id="HR" />
+                  <input type="checkbox" id="HR" aria-label="Human Resource" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0"/>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                  <label for="HR">Human Resource</label>
+                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">Human Resource
                 </th>
                 <td class="px-6 py-4">
                   <ol>
@@ -100,28 +99,27 @@
                   </ol>
                 </td>
                 <td class="px-6 py-4 text-right">
-                  <button @click="open('edit')">
+                  <button @click="open('edit')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="pen-to-square"
                       class="p-1 text-[#0053B7]"
                     />
-                    <span class="sr-only">Edit</span>
+                    <span class="sr-only">Human Resource Edit</span>
                   </button>
-                  <button @click="open('alert')">
+                  <button @click="open('alert')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="trash-can"
                       class="p-1 text-red-800"
                     />
-                    <span class="sr-only">Delete</span>
+                    <span class="sr-only">Human Resource Delete</span>
                   </button>
                 </td>
               </tr>
               <tr class="border-b">
                 <td class="px-2 py-2">
-                  <input type="checkbox" id="ED" />
+                  <input type="checkbox" id="ED" aria-label="Education" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0"/>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                  <label for="ED">Education</label>
+                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">Education
                 </th>
                 <td class="px-6 py-4">
                   <ol>
@@ -129,28 +127,27 @@
                   </ol>
                 </td>
                 <td class="px-6 py-4 text-right">
-                  <button @click="open('edit')">
+                  <button @click="open('edit')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="pen-to-square"
                       class="p-1 text-[#0053B7]"
                     />
-                    <span class="sr-only">Edit</span>
+                    <span class="sr-only">Education Edit</span>
                   </button>
-                  <button @click="open('alert')">
+                  <button @click="open('alert')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="trash-can"
                       class="p-1 text-red-800"
                     />
-                    <span class="sr-only">Delete</span>
+                    <span class="sr-only">Education Delete</span>
                   </button>
                 </td>
               </tr>
               <tr class="border-b">
                 <td class="px-2 py-2">
-                  <input type="checkbox" id="EN" />
+                  <input type="checkbox" id="EN" aria-label="English" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0"/>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                  <label for="EN">English</label>
+                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">English
                 </th>
                 <td class="px-6 py-4">
                   <ol>
@@ -158,28 +155,27 @@
                   </ol>
                 </td>
                 <td class="px-6 py-4 text-right">
-                  <button @click="open('edit')">
+                  <button @click="open('edit')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="pen-to-square"
                       class="p-1 text-[#0053B7]"
                     />
-                    <span class="sr-only">Edit</span>
+                    <span class="sr-only">English Edit</span>
                   </button>
-                  <button @click="open('alert')">
+                  <button @click="open('alert')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="trash-can"
                       class="p-1 text-red-800"
                     />
-                    <span class="sr-only">Delete</span>
+                    <span class="sr-only">English Delete</span>
                   </button>
                 </td>
               </tr>
               <tr class="border-b">
                 <td class="px-2 py-2">
-                  <input type="checkbox" id="AC" />
+                  <input type="checkbox" id="AC" aria-label="Academic" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0"/>
                 </td>
-                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                  <label for="AC">Academic</label>
+                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">Academic
                 </th>
                 <td class="px-6 py-4">
                   <ol>
@@ -187,19 +183,19 @@
                   </ol>
                 </td>
                 <td class="px-6 py-4 text-right">
-                  <button @click="open('edit')">
+                  <button @click="open('edit')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="pen-to-square"
                       class="p-1 text-[#0053B7]"
                     />
-                    <span class="sr-only">Edit</span>
+                    <span class="sr-only">Academic Edit</span>
                   </button>
-                  <button @click="open('alert')">
+                  <button @click="open('alert')" :tabindex="(this.add || this.edit || this.alert) ? -1 : 0">
                     <font-awesome-icon
                       icon="trash-can"
                       class="p-1 text-red-800"
                     />
-                    <span class="sr-only">Delete</span>
+                    <span class="sr-only">Academic Delete</span>
                   </button>
                 </td>
               </tr>
@@ -230,6 +226,7 @@
                       type="button"
                       class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                       @click="closeModal('add')"
+                      :tabindex="this.alert ? -1 : 0"
                     >
                       <svg
                         class="w-3 h-3"
@@ -261,13 +258,14 @@
                         type="text"
                         class="border-b-[0.8px] border-b-slate-400 w-full mt-1"
                         id="user"
-                        placeholder="ex. Super Admin"
+                        placeholder="example: Super Admin"
+                        :tabindex="this.alert ? -1 : 0"
                       />
                     </div>
                     <div>
                       <fieldset>
                         <legend class="text-xs m-0 text-[#101827]">
-                          Choose Access Rights
+                          Choose User's Access Rights
                         </legend>
                         <div
                           class="h-[150px] border-t-[1px] border-[1px] p-4 overflow-scroll rounded-lg"
@@ -277,22 +275,23 @@
                               type="checkbox"
                               class="mr-2 border-slate-600"
                               id="addAll"
+                              :tabindex="this.alert ? -1 : 0"
                             />
-                            <label for="addAll" class="text-sm text-slate-600"
-                              >All</label
+                            <label for="addAll" class="text-sm"
+                              >Select All Access Rights</label
                             >
                           </div>
                           <div class="grid grid-cols-3">
                             <div class="flex p-2">
-                              <input type="checkbox" class="mr-2" id="addRe" />
+                              <input type="checkbox" class="mr-2" id="addRe" :tabindex="this.alert ? -1 : 0"/>
                               <label for="addRe" class="text-sm">Read</label>
                             </div>
                             <div class="flex p-2">
-                              <input type="checkbox" class="mr-2" id="addWr" />
+                              <input type="checkbox" class="mr-2" id="addWr" :tabindex="this.alert ? -1 : 0"/>
                               <label for="addWr" class="text-sm">Write</label>
                             </div>
                             <div class="flex p-2">
-                              <input type="checkbox" class="mr-2" id="addDe" />
+                              <input type="checkbox" class="mr-2" id="addDe" :tabindex="this.alert ? -1 : 0"/>
                               <label for="addDe" class="text-sm">Delete</label>
                             </div>
                           </div>
@@ -309,6 +308,7 @@
                     type="button"
                     class="ml-auto h-[40px] w-[100px] rounded-lg text-sm font-medium px-5 py-2.5 bg-slate-300 text-black hover:bg-slate-200 border border-slate-300"
                     @click="closeModal('add')"
+                    :tabindex="this.alert ? -1 : 0"
                   >
                     Cancel
                   </button>
@@ -316,6 +316,7 @@
                     type="button"
                     class="h-[40px] w-[140px] text-white bg-[#1C4E9A] hover:bg-[#0053B7] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                     @click="open('alert')"
+                    :tabindex="this.alert ? -1 : 0"
                   >
                     Save User Type
                   </button>
@@ -343,6 +344,7 @@
                       type="button"
                       class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                       @click="closeModal('edit')"
+                      :tabindex="this.alert ? -1 : 0"
                     >
                       <svg
                         class="w-3 h-3"
@@ -375,12 +377,13 @@
                         class="border-b-[0.8px] border-b-slate-400 w-full mt-1"
                         value="Super Admin"
                         id="superAdmin"
+                        :tabindex="this.alert ? -1 : 0"
                       />
                     </div>
                     <div>
                       <fieldset>
                         <legend class="text-xs m-0 text-[#101827]">
-                          Choose Access Rights
+                          Choose User's Access Rights
                         </legend>
                         <div
                           class="h-[150px] border-t-[1px] border-[1px] p-4 overflow-scroll rounded-lg"
@@ -391,9 +394,10 @@
                               class="mr-2 border-slate-600"
                               id="saAll"
                               checked
+                              :tabindex="this.alert ? -1 : 0"
                             />
-                            <label for="saAll" class="text-sm text-slate-600"
-                              >All</label
+                            <label for="saAll" class="text-sm"
+                              >Select All Access Rights</label
                             >
                           </div>
                           <div class="grid grid-cols-3">
@@ -403,6 +407,7 @@
                                 class="mr-2"
                                 id="saRe"
                                 checked
+                                :tabindex="this.alert ? -1 : 0"
                               />
                               <label for="saRe" class="text-sm">Read</label>
                             </div>
@@ -412,6 +417,7 @@
                                 class="mr-2"
                                 id="saWr"
                                 checked
+                                :tabindex="this.alert ? -1 : 0"
                               />
                               <label for="saWr" class="text-sm">Write</label>
                             </div>
@@ -421,6 +427,7 @@
                                 class="mr-2"
                                 id="saDe"
                                 checked
+                                :tabindex="this.alert ? -1 : 0"
                               />
                               <label for="saDe" class="text-sm">Delete</label>
                             </div>
@@ -438,6 +445,7 @@
                     type="button"
                     class="ml-auto h-[40px] w-[100px] rounded-lg text-sm font-medium px-5 py-2.5 bg-slate-300 text-black hover:bg-slate-200 border border-slate-300"
                     @click="closeModal('edit')"
+                    :tabindex="this.alert ? -1 : 0"
                   >
                     Cancel
                   </button>
@@ -445,6 +453,7 @@
                     type="button"
                     class="h-[40px] w-[100px] text-white bg-[#1C4E9A] hover:bg-[#0053B7] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                     @click="open('alert')"
+                    :tabindex="this.alert ? -1 : 0"
                   >
                     Save
                   </button>
@@ -509,7 +518,7 @@
                 <button
                   data-modal-hide="popup-modal"
                   type="button"
-                  class="text-white bg-red-800 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                  class="text-white bg-red-800 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-600 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
                 >
                   Yes, I'm sure
                 </button>

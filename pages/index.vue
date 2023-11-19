@@ -2,19 +2,19 @@
   <Head>
     <Title>Product Access Editor Login</Title>
   </Head>
-  <div class="flex justify-center bg-cyan-900 text-white" id="skip">
+  <div class="flex justify-center bg-cyan-900 text-white" id="skip" lang="EN">
     <a href="#signIn" class="underline border-0">Login as a user</a>
   </div>
-  <div class="flex justify-center bg-cyan-900 text-white" id="skip">
+  <div class="flex justify-center bg-cyan-900 text-white" id="skip" lang="EN">
     <a href="/register" class="underline border-0">Sign Up as a new user</a>
   </div>
-  <div class="grid grid-cols-9 h-[100vh]">
+  <div class="grid grid-cols-9 h-[100vh]" lang="EN">
     <div
-      class="h-auto w-full bg-[url('@/assets/img/bg1.jpg')] bg-cover bg-right-top rounded-r-lg z-10 col-span-5"
+      class="loginBg rounded-r-lg z-10 col-span-5"
     >
-      <div
-        class="h-full absolute w-[55.5%] bg-black rounded-r-lg opacity-30 z-10"
-      ></div>
+      <!-- <div
+        class="h-full absolute w-[55.5%] bg-black rounded-r-lg opacity-40 z-10"
+      ></div> -->
       <div class="w-full h-full z-20">
         <div class="flex text-white m-3">
           <Logo />
@@ -44,13 +44,13 @@
       class="h-full w-full flex items-center justify-center bg-white z-0 col-span-4"
     >
       <div class="w-[50%]">
-        <p
+        <h1
           class="text-[45px] font-bold text-slate-600"
           id="signIn"
           tabindex="0"
         >
           Sign In
-        </p>
+      </h1>
         <fieldset id="error"
           tabindex="0"
           class="border-red-600 border-[0.5px] rounded-lg flex justify-center p-5 bg-red-200"
@@ -121,7 +121,6 @@ export default defineComponent({
       emailRequired: false,
       passwordRequired: false,
       notMatch: false,
-      error: false,
     };
   },
   props: {
@@ -135,6 +134,9 @@ export default defineComponent({
     },
     async login(event) {
       // navigateTo("/products");
+      this.emailRequired = false;
+      this.passwordRequired = false;
+      this.notMatch = false;
 
       await this.v$.$validate();
       if (this.v$.$error) {
@@ -146,8 +148,8 @@ export default defineComponent({
           } else if (item.$validator === "sameAs") {
             this.notMatch = true;
           } 
-          document.getElementById("error").focus();
         });
+        document.getElementById("error").focus();
       } else {
         navigateTo('/products')
       }

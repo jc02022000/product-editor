@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="sticky top-0 z-10">
-      <NavigationBar />
+      <NavigationBar :open="open"/>
     </nav>
     <main>
       <div>
@@ -19,9 +19,25 @@
         <p>Copyright©2023 Camrbidge University Press and Assessment</p>
       </div>
       <div class="ml-5 text-white underline absoute float-right right-0">
-        <div><a href="/products">Books</a></div>
-        <div><a href="/userTypes">User Types</a></div>
+        <div><a href="/products" :tabindex="open ? -1 : 0">Books</a></div>
+        <div><a href="/userTypes" :tabindex="open ? -1 : 0">User Types</a></div>
       </div>
     </footer>
   </div>
 </template>
+
+<script>
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  data(){
+    return{}
+  },
+  props:{
+    open:{
+      type: Boolean
+    }
+  }
+
+})
+</script>

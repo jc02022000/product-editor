@@ -142,11 +142,8 @@
       </div>
     </div>
     <div
-      class="h-full w-full bg-[url('@/assets/img/bg1.jpg')] bg-cover bg-right-top rounded-l-lg z-10 flex col-span-5"
+      class="loginBg rounded-l-lg z-10 flex col-span-5"
     >
-      <!-- <div
-        class="h-full absolute bg-black rounded-r-lg opacity-30 z-10"
-      ></div> -->
       <div class="flex justify-center items-center h-full w-full">
         <div class="text-white z-20 w-full">
           <h1 class="text-center text-[70px] font-bold">Welcome Back!</h1>
