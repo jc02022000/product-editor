@@ -221,10 +221,10 @@
                               class="mr-2"
                               @click="clickCheckBox(index)"
                               :checked="this.users.includes(index)"
-                              id="braveSA"
+                              :id="index"
                               :tabindex="this.alert ? -1 : 0"
                             />
-                            <label for="braveSA" class="text-sm">{{
+                            <label :for="index" class="text-sm">{{
                               item
                             }}</label>
                           </div>
@@ -387,10 +387,10 @@
                               type="checkbox"
                               class="mr-2"
                               :checked="this.users.includes(index)"
-                              id="braveSA"
+                              :id="'edit'+ index"
                               :tabindex="this.alert ? -1 : 0"
                             />
-                            <label for="braveSA" class="text-sm">{{
+                            <label :for="'edit'+ index" class="text-sm">{{
                               item
                             }}</label>
                           </div>
@@ -430,9 +430,9 @@
           :class="alert ? '' : 'hidden'"
         >
           <div
-            class="relative w-full max-w-lg max-h-full bg-white rounded-lg text-black"
+            class="relative w-full max-w-lg max-h-full rounded-lg text-black"
           >
-            <div class="relative rounded-lg shadow bg-white dark:bg-gray-700 bg-[#323e53]">
+            <div class="relative rounded-lg shadow  bg-[#323e53]">
               <button
                 type="button"
                 class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -485,7 +485,7 @@
                 <button
                   data-modal-hide="popup-modal"
                   type="button"
-                  class="text-gray-500 text-white bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                  class="text-gray-500 text-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
                   @click="closeModal('alert')"
                 >
                   No, cancel
